@@ -1,4 +1,10 @@
-import logo from "./logo.svg";
+import React from "react";
+import { HeaderComponent } from "./components/Header";
+import { GeneralInformationComponent } from "./components/GeneralInformation";
+import { OverviewComponent } from "./components/Overview";
+import { ExperienceComponent } from "./components/Experience";
+import { FooterComponent } from "./components/Footer";
+
 import "./App.css";
 import { useTranslation } from "react-i18next";
 
@@ -6,13 +12,9 @@ const App = () => {
   const { t, i18n } = useTranslation(["common"]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{t("FULL_NAME")}</p>
-        <button onClick={() => i18n.changeLanguage("ar")}>ar</button>
-        <button onClick={() => i18n.changeLanguage("en")}>en</button>
-        <button onClick={() => i18n.changeLanguage("de")}>de</button>
-      </header>
+      <HeaderComponent />
+      <OverviewComponent />
+      <GeneralInformationComponent />
     </div>
   );
 };
