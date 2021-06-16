@@ -9,7 +9,7 @@ import { StyledMenu } from "../styled/Menu/menu";
 import RLogo from "../assets/images/r-logo.jpg";
 
 const HeaderComponent = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(["common"]);
 
   const [width, setWidth] = useState(window.innerWidth);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -30,22 +30,22 @@ const HeaderComponent = () => {
     <StyledMenu mode={mode}>
       <Menu.Item key="about">
         <HashLink scroll={(el) => scrollWithOffset(el)} smooth to="#about">
-          {t("About")}
+          {t("ABOUT")}
         </HashLink>
       </Menu.Item>
       <Menu.Item key="experience">
         <HashLink scroll={(el) => scrollWithOffset(el)} smooth to="#experience">
-          {t("Experience")}
+          {t("EXPERIENCE")}
         </HashLink>
       </Menu.Item>
       <Menu.Item key="projects">
         <HashLink scroll={(el) => scrollWithOffset(el)} smooth to="#projects">
-          {t("Projects")}
+          {t("PROJECTS")}
         </HashLink>
       </Menu.Item>
       <Menu.Item key="education">
         <HashLink scroll={(el) => scrollWithOffset(el)} smooth to="#education">
-          {t("Education")}
+          {t("EDUCATION")}
         </HashLink>
       </Menu.Item>
       <Menu.SubMenu key="lang" title={t("LANG")}>

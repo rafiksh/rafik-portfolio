@@ -1,6 +1,7 @@
 import React from "react";
-import { Row, Col } from "antd";
-import { Typography } from "antd";
+import { useTranslation } from "react-i18next";
+import { Row, Col, Typography } from "antd";
+
 import { ProjectCard } from "../styled/card/card";
 
 import ViaCardCover from "../assets/images/via/viacard-cover-en.png";
@@ -21,51 +22,39 @@ import { ReactComponent as AreebaLogo } from "../assets/images/paymentGateway/ar
 
 const { Title } = Typography;
 
-const projects = [
-  {
-    title: "Areeba Merchant Portal",
-    Logo: <AreebaLogo style={{ width: 100 }} />,
-    onClick: () => {},
-    description:
-      "Areeba merchant portal offers Custom Branded Invoice Design Recurring Invoicing & Auto-Bill Clients Custom Late-Payment Auto-Reminder Emails etc.",
-    images: [MerchantPortalCover, MerchantPortalGeneral, MerchantPortalLogin],
-  },
-  {
-    title: "Zaky",
-    Logo: <img alt="alt" src={ZakyLogo} style={{ height: 50 }} />,
-    onClick: () => {},
-    description:
-      "Zaky is a digital mobile payment platform that enables consumers, merchants and services providers to make and receive their payments in a seamless and secure way.",
-    images: [ZakyLanding, ZakyActivity, ZakySend],
-  },
-  {
-    title: "ViaCard",
-    Logo: <ViaCardLogo style={{ width: 100 }} />,
-    onClick: () => {},
-    description:
-      "ViaCard is the perfect answer to the needs of Lebanese people travelling abroad, shopping online or even those whose children are studying overseas.",
-    images: [ViaCardCover, ViaCardEn, ViaCardAr, ViaCardForm],
-  },
-  {
-    title: "Areeba Payment Gateway",
-    Logo: <AreebaLogo style={{ width: 100 }} />,
-    onClick: () => {},
-    description:
-      "Areeba payment gateway is a technology used by merchants to accept debit or credit card purchases from customers.",
-    images: [PaymentGatewayCover, PaymentGatewayMobile],
-  },
-];
-
 const ProjectsComponent = () => {
+  const { t } = useTranslation(["common"]);
+  const projects = [
+    {
+      title: t("FIRST_PROJECT_TITLE"),
+      description: t("FIRST_PROJECT_SUMMARY"),
+      Logo: <AreebaLogo style={{ width: 100 }} />,
+      images: [MerchantPortalCover, MerchantPortalGeneral, MerchantPortalLogin],
+    },
+    {
+      title: t("SECOND_PROJECT_TITLE"),
+      description: t("SECOND_PROJECT_SUMMARY"),
+      Logo: <img alt="alt" src={ZakyLogo} style={{ height: 50 }} />,
+      images: [ZakyLanding, ZakyActivity, ZakySend],
+    },
+    {
+      title: t("THIRD_PROJECT_TITLE"),
+      description: t("THIRD_PROJECT_SUMMARY"),
+      Logo: <ViaCardLogo style={{ width: 100 }} />,
+      images: [ViaCardCover, ViaCardEn, ViaCardAr, ViaCardForm],
+    },
+    {
+      title: t("FOURTH_PROJECT_TITLE"),
+      description: t("FOURTH_PROJECT_SUMMARY"),
+      Logo: <AreebaLogo style={{ width: 100 }} />,
+      images: [PaymentGatewayCover, PaymentGatewayMobile],
+    },
+  ];
+
   return (
-    <Row
-      align="middle"
-      justify="center"
-      style={{ width: "100%" }}
-      id="projects"
-    >
+    <Row id="projects" justify="center" align="middle">
       <Col xs={22} md={18} xl={14}>
-        <Title>Projects</Title>
+        <Title>{t("PROJECTS")}</Title>
         <Row align="bottom" justify="space-between">
           {projects.map((project) => (
             <Col xs={24} md={12} key={project.title}>

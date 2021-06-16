@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { HeaderComponent } from "./components/Header";
-import { GeneralInformationComponent } from "./components/GeneralInformation";
+import { AboutComponent } from "./components/About";
 import { OverviewComponent } from "./components/Overview";
 import { ExperienceComponent } from "./components/Experience";
 import { ProjectsComponent } from "./components/Projects";
@@ -23,7 +23,7 @@ const App = () => {
         <Row className="App" align="middle" justify="center">
           <HeaderComponent />
           <OverviewComponent />
-          <GeneralInformationComponent />
+          <AboutComponent />
           <Col xs={22} md={18} xl={14}>
             <Divider />
           </Col>

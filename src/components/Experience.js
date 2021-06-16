@@ -1,69 +1,64 @@
 import React from "react";
-import { Row, Col, Divider } from "antd";
-import { Typography } from "antd";
+import { useTranslation } from "react-i18next";
+import { Row, Col, Divider, Typography } from "antd";
+
 import { InformationCard } from "../styled/card/card";
 
 const { Title } = Typography;
 
-const experience = [
-  {
-    postion: "Full Stack Developer",
-    title: "Areeba",
-    location: "Beirut, Lebanon",
-    date: "Oct 2020 - Present",
-    content: [
-      "Enforced Agile and Scrum development methodologies on interface projects to shorten development times.",
-      "Collaborated with product management to design, build and test systems",
-      "Developed intuitive graphical user interfaces using React.js and React Native",
-      "Designed, developed and co-led the development of software applications according to established requirements.",
-    ],
-  },
-  {
-    postion: "Machine Learning Engineer",
-    title: "PalmTech",
-    location: "Istanbul, Turkey",
-    date: "Oct 2019 - April 2020",
-    content: [
-      "Developed advanced graphic visualization concepts to map and simplify analysis of heavily-numeric data and reports.",
-      "Implemented and evaluated artificial intelligence and machine learning algorithms and neural networks for diverse industries.",
-      "Transformed raw data to conform to assumptions of machine learning algorithm.",
-    ],
-  },
-  {
-    postion: "Data Scientist",
-    title: "Commencis",
-    location: "Istanbul, Turkey",
-    date: "Jan 2019 - June 2019",
-    content: [
-      "Created and cultivated test and learn culture among CRM and digitization groups, creating and executing structured experimentations based on data-driven and market ideas.",
-      "Developed data-gathering and reporting structures from ground up and strategized methods capitalizing on system features",
-    ],
-  },
-  {
-    postion: "IT Support Specialist",
-    title: "Basmeh & Zeitooneh",
-    location: "Bar El Yis, Lebanon",
-    date: "Jan 2018 - Sept 2018",
-    content: [
-      "Managed large data projects, including data entry and accuracy verification.",
-      "Installed and configured software and hardware.",
-      "Removed malware, ransomware and other threats from laptops and desktop systems.",
-    ],
-  },
-];
-
 const ExperienceComponent = () => {
+  const { t } = useTranslation(["common"]);
+
+  const experience = [
+    {
+      position: t("FIRST_JOB_POSITION"),
+      title: t("FIRST_JOB_TITLE"),
+      location: t("FIRST_JOB_LOCATION"),
+      date: t("FIRST_JOB_DATE"),
+      content: [
+        t("FIRST_JOB_BULLET_1"),
+        t("FIRST_JOB_BULLET_2"),
+        t("FIRST_JOB_BULLET_3"),
+        t("FIRST_JOB_BULLET_4"),
+      ],
+    },
+    {
+      position: t("SECOND_JOB_POSITION"),
+      title: t("SECOND_JOB_TITLE"),
+      location: t("SECOND_JOB_LOCATION"),
+      date: t("SECOND_JOB_DATE"),
+      content: [
+        t("SECOND_JOB_BULLET_1"),
+        t("SECOND_JOB_BULLET_2"),
+        t("SECOND_JOB_BULLET_3"),
+      ],
+    },
+    {
+      position: t("THIRD_JOB_POSITION"),
+      title: t("THIRD_JOB_TITLE"),
+      location: t("THIRD_JOB_LOCATION"),
+      date: t("THIRD_JOB_DATE"),
+      content: [t("THIRD_JOB_BULLET_1"), t("THIRD_JOB_BULLET_2")],
+    },
+    {
+      position: t("FOURTH_JOB_POSITION"),
+      title: t("FOURTH_JOB_TITLE"),
+      location: t("FOURTH_JOB_LOCATION"),
+      date: t("FOURTH_JOB_DATE"),
+      content: [
+        t("FOURTH_JOB_BULLET_1"),
+        t("FOURTH_JOB_BULLET_2"),
+        t("FOURTH_JOB_BULLET_3"),
+      ],
+    },
+  ];
+
   return (
-    <Row
-      align="middle"
-      justify="center"
-      style={{ width: "100%" }}
-      id="experience"
-    >
+    <Row id="experience" justify="center" align="middle">
       <Col xs={22} md={18} xl={14}>
-        <Title>Experience</Title>
+        <Title>{t("EXPERIENCE")}</Title>
         {experience.map((exp) => (
-          <Col key={exp.postion}>
+          <Col key={exp.position}>
             <InformationCard {...exp} />
             <Divider style={{ borderColor: "white" }} />
           </Col>

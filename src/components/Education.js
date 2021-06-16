@@ -1,39 +1,35 @@
 import React from "react";
-import { Row, Col, Divider } from "antd";
-import { Typography } from "antd";
+import { Row, Col, Divider, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 
 import { EducationCard } from "../styled/card/card";
 
 const { Title } = Typography;
 
-const education = [
-  {
-    postion: "Masters of Science in Computer Engineering",
-    title: "Bahcesehir University",
-    location: "Istanbul, Turkey",
-    date: "2018 - 2020",
-  },
-  {
-    postion: "Bachelor of Science in Computer and Communication Engineering",
-    title: "Lebanese International University",
-    location: "Istanbul, Turkey",
-    date: "Oct 2019 - April 2020",
-  },
-];
-
 const EducationComponent = () => {
+  const { t } = useTranslation(["common"]);
+
+  const education = [
+    {
+      major: t("MASTERS_MAJOR"),
+      university: t("MASTERS_UNIVERSITY"),
+      location: t("MASTERS_LOCATION"),
+      date: t("MASTERS_DATE"),
+    },
+    {
+      major: t("BACHELOR_MAJOR"),
+      university: t("BACHELOR_UNIVERSITY"),
+      location: t("BACHELOR_LOCATION"),
+      date: t("BACHELOR_DATE"),
+    },
+  ];
   return (
-    <Row
-      align="middle"
-      justify="center"
-      style={{ width: "100%" }}
-      id="education"
-    >
+    <Row id="education" justify="center" align="middle">
       <Col xs={22} md={18} xl={14}>
-        <Title>Education</Title>
+        <Title>{t("EDUCATION")}</Title>
         <Row align="middle" justify="space-between">
           {education.map((ed) => (
-            <Col xs={24} xl={10} key={ed.title}>
+            <Col xs={24} key={ed.title}>
               <EducationCard {...ed} />
               <Divider style={{ borderColor: "white" }} />
             </Col>

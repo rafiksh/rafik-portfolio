@@ -19,9 +19,9 @@ const TitleComponent = (postion, title, location, date) => {
   );
 };
 
-const InformationCard = ({ postion, title, location, date, content }) => (
+const InformationCard = ({ position, title, location, date, content }) => (
   <Card
-    title={TitleComponent(postion, title, location, date)}
+    title={TitleComponent(position, title, location, date)}
     style={{ textAlign: "start" }}
   >
     {content && (
@@ -35,13 +35,13 @@ const InformationCard = ({ postion, title, location, date, content }) => (
     )}
   </Card>
 );
-const EducationCard = ({ postion, title, location, date }) => (
+const EducationCard = ({ major, university, location, date }) => (
   <Card style={{ textAlign: "start" }}>
     <Col>
       <Typography>
-        <Title level={3}>{postion}</Title>
+        <Title level={3}>{major}</Title>
         <Paragraph>
-          {title} - {location}
+          {university} - {location}
           <Paragraph style={{ color: "grey" }}>{date}</Paragraph>
         </Paragraph>
       </Typography>
@@ -49,7 +49,7 @@ const EducationCard = ({ postion, title, location, date }) => (
   </Card>
 );
 
-const ProjectCard = ({ description, title, Logo, images, onClick }) => (
+const ProjectCard = ({ title, description, Logo, images }) => (
   <Card
     style={{ width: 450, textAlign: "start" }}
     cover={
@@ -64,7 +64,6 @@ const ProjectCard = ({ description, title, Logo, images, onClick }) => (
           ))}
       </Image.PreviewGroup>
     }
-    onClick={onClick}
   >
     <Meta
       avatar={Logo}
