@@ -13,6 +13,11 @@ let en = {
     EDUCATION: "Education",
     LANG: "Lang",
 
+    /** Overview */
+    HELLO: "Hello, I am",
+    ROLE_1: "Software Engineer",
+    ROLE_2: "Full Stack Developer",
+
     /** About Me */
     ABOUT_TITLE: "About Me",
     ABOUT_TEXT:
