@@ -1,6 +1,5 @@
 import React from "react";
-import { Row, Divider, Col } from "antd";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, Row, Divider, Col } from "antd";
 import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
