@@ -1,21 +1,36 @@
 import React from "react";
+import { Row, Col } from "antd";
+import { ConfigProvider } from "antd";
+import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
+
 import { HeaderComponent } from "./components/Header";
 import { GeneralInformationComponent } from "./components/GeneralInformation";
 import { OverviewComponent } from "./components/Overview";
 import { ExperienceComponent } from "./components/Experience";
+import { ProjectsComponent } from "./components/Projects";
+import { EducationComponent } from "./components/Education";
 import { FooterComponent } from "./components/Footer";
 
 import "./App.css";
+import "antd/dist/antd.css";
 import { useTranslation } from "react-i18next";
 
 const App = () => {
   const { t, i18n } = useTranslation(["common"]);
   return (
-    <div className="App">
-      <HeaderComponent />
-      <OverviewComponent />
-      <GeneralInformationComponent />
-    </div>
+    <ConfigProvider direction={i18n?.dir()}>
+      <BrowserRouter>
+        <Row className="App" align="middle" justify="center">
+          <HeaderComponent />
+          <OverviewComponent />
+          <GeneralInformationComponent />
+          <ExperienceComponent />
+          <ProjectsComponent />
+          <EducationComponent />
+          <FooterComponent />
+        </Row>
+      </BrowserRouter>
+    </ConfigProvider>
   );
 };
 

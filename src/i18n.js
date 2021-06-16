@@ -15,7 +15,7 @@ i18n
       ar: ar,
       de: de,
     },
-    fallbackLng: "en",
+    fallbackLng: ["en", "ar", "de"],
     debug: false,
 
     keySeparator: false, // we use content as keys
