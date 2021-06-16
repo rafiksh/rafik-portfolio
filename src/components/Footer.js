@@ -15,7 +15,7 @@ const FooterComponent = () => {
           color: "white",
         }}
       >
-        <Col>Copyright © 2021 Rafik Shmoury</Col>
+        <Col>Copyright © 2021 Rafik Al Shmoury</Col>
         <Col xs={24}>
           <Row align="middle" justify="center">
             <SocialButtonsContainer

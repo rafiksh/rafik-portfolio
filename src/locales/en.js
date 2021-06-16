@@ -4,7 +4,7 @@
  */
 let en = {
   common: {
-    FULL_NAME: "Rafik Shmoury",
+    FULL_NAME: "Rafik Al Shmoury",
 
     /** navbar */
     ABOUT: "About",
@@ -56,7 +56,7 @@ let en = {
       "Developed data-gathering and reporting structures from ground up and strategized methods capitalizing on system features",
     FOURTH_JOB_POSITION: "IT Support Specialist",
     FOURTH_JOB_TITLE: "Basmeh & Zeitooneh",
-    FOURTH_JOB_LOCATION: "Bar El Yis, Lebanon",
+    FOURTH_JOB_LOCATION: "Bar Elias, Lebanon",
     FOURTH_JOB_DATE: "Jan 2018 - Sept 2018",
     FOURTH_JOB_BULLET_1:
       "Managed large data projects, including data entry and accuracy verification.",
@@ -87,7 +87,7 @@ let en = {
       "Bachelor of Science in Computer and Communication Engineering",
     BACHELOR_UNIVERSITY: "Lebanese International University",
     BACHELOR_LOCATION: "Istanbul, Turkey",
-    BACHELOR_DATE: "Oct 2019 - April 2020",
+    BACHELOR_DATE: "2019 - 2020",
   },
 };
 
