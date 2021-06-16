@@ -1,7 +1,7 @@
 import React from "react";
-import { Row, Col } from "antd";
+import { Row, Divider, Col } from "antd";
 import { ConfigProvider } from "antd";
-import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import { HeaderComponent } from "./components/Header";
 import { GeneralInformationComponent } from "./components/GeneralInformation";
@@ -23,9 +23,19 @@ const App = () => {
         <Row className="App" align="middle" justify="center">
           <HeaderComponent />
           <OverviewComponent />
+
           <GeneralInformationComponent />
+          <Col xs={22} md={18} xl={14}>
+            <Divider />
+          </Col>
           <ExperienceComponent />
+          <Col xs={22} md={18} xl={14}>
+            <Divider />
+          </Col>
           <ProjectsComponent />
+          <Col xs={22} md={18} xl={14}>
+            <Divider />
+          </Col>
           <EducationComponent />
           <FooterComponent />
         </Row>

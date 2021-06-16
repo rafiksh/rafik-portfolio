@@ -27,7 +27,7 @@ const projects = [
     Logo: <AreebaLogo style={{ width: 100 }} />,
     onClick: () => {},
     description:
-      "Areeba merchant portal offers Custom Branded Invoice Design Recurring Invoicing & Auto-Bill Clients Custom Late-Payment Auto-Reminder Emails Enable E-Signature / 'Approve Terms' Checkbox Attached Invoice PDFs to Client Emails",
+      "Areeba merchant portal offers Custom Branded Invoice Design Recurring Invoicing & Auto-Bill Clients Custom Late-Payment Auto-Reminder Emails etc.",
     images: [MerchantPortalCover, MerchantPortalGeneral, MerchantPortalLogin],
   },
   {
@@ -64,7 +64,7 @@ const ProjectsComponent = () => {
       style={{ width: "100%" }}
       id="projects"
     >
-      <Col xs={22} md={18}>
+      <Col xs={22} md={18} xl={14}>
         <Title>Projects</Title>
         <Row align="bottom" justify="space-between">
           {projects.map((project) => (

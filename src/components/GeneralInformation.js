@@ -10,10 +10,10 @@ const GeneralInformationComponent = () => {
     <Row
       align="middle"
       justify="center"
-      style={{ height: 300, width: "100%" }}
+      style={{ marginTop: 20, width: "100%" }}
       id="about"
     >
-      <Col xs={22} md={18}>
+      <Col xs={22} md={18} xl={14}>
         <Typography>
           <Title>
             About Me

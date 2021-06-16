@@ -57,10 +57,10 @@ const ExperienceComponent = () => {
     <Row
       align="middle"
       justify="center"
-      style={{ flex: 1, width: "100%" }}
+      style={{ width: "100%" }}
       id="experience"
     >
-      <Col xs={22} md={18}>
+      <Col xs={22} md={18} xl={14}>
         <Title>Experience</Title>
         {experience.map((exp) => (
           <>

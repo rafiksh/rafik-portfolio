@@ -25,10 +25,10 @@ const EducationComponent = () => {
     <Row
       align="middle"
       justify="center"
-      style={{ flex: 1, width: "100%" }}
+      style={{ width: "100%" }}
       id="education"
     >
-      <Col xs={22} md={18}>
+      <Col xs={22} md={18} xl={14}>
         <Title>Education</Title>
         <Row align="middle" justify="space-between">
           {education.map((exp) => (
