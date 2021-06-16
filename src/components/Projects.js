@@ -68,7 +68,7 @@ const ProjectsComponent = () => {
         <Title>Projects</Title>
         <Row align="bottom" justify="space-between">
           {projects.map((project) => (
-            <Col xs={24} md={12}>
+            <Col xs={24} md={12} key={project.title}>
               <Row align="bottom" justify="center" style={{ marginBottom: 50 }}>
                 <ProjectCard {...project} />
               </Row>

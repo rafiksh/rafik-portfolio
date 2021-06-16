@@ -77,11 +77,11 @@ const HeaderComponent = () => {
               <Row
                 align="middle"
                 justify="space-between"
-                align="middle"
                 style={{
                   backgroundColor: "white",
-                  borderRadius: 15,
+                  borderRadius: 20,
                   padding: 15,
+                  border: "1px solid rgba(0,0,0,0.3)",
                 }}
               >
                 <Col xs={1}>

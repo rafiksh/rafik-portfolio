@@ -1,7 +1,8 @@
 import React from "react";
 import { Row, Col, Divider } from "antd";
 import { Typography } from "antd";
-import { EducationCard, InformationCard } from "../styled/card/card";
+
+import { EducationCard } from "../styled/card/card";
 
 const { Title } = Typography;
 
@@ -31,9 +32,9 @@ const EducationComponent = () => {
       <Col xs={22} md={18} xl={14}>
         <Title>Education</Title>
         <Row align="middle" justify="space-between">
-          {education.map((exp) => (
-            <Col xs={24} xl={10}>
-              <EducationCard {...exp} />
+          {education.map((ed) => (
+            <Col xs={24} xl={10} key={ed.title}>
+              <EducationCard {...ed} />
               <Divider style={{ borderColor: "white" }} />
             </Col>
           ))}

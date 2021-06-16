@@ -63,10 +63,10 @@ const ExperienceComponent = () => {
       <Col xs={22} md={18} xl={14}>
         <Title>Experience</Title>
         {experience.map((exp) => (
-          <>
+          <Col key={exp.postion}>
             <InformationCard {...exp} />
             <Divider style={{ borderColor: "white" }} />
-          </>
+          </Col>
         ))}
       </Col>
     </Row>

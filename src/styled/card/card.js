@@ -28,7 +28,7 @@ const InformationCard = ({ postion, title, location, date, content }) => (
       <Paragraph>
         <ul>
           {content.map((content) => (
-            <li key={content}>{content}</li>
+            <li key={content + "44"}>{content}</li>
           ))}
         </ul>
       </Paragraph>
@@ -57,6 +57,7 @@ const ProjectCard = ({ description, title, Logo, images, onClick }) => (
         {images &&
           images.map((image) => (
             <Image
+              key={image}
               style={{ display: image !== images[0] ? "none" : "block" }}
               src={image}
             />
