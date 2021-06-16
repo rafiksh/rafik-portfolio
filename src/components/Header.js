@@ -93,7 +93,7 @@ const HeaderComponent = () => {
                     <img src={RLogo} alt="rafik" className={"r-logo"} />
                   </HashLink>
                 </Col>
-                <Col xs={0} md={20}>
+                <Col xs={0} md={22}>
                   <Row justify="end">{renderMenu("horizontal")}</Row>
                 </Col>
                 <Col xs={1} md={0}>
