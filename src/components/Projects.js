@@ -4,19 +4,27 @@ import { Row, Col, Typography } from "antd";
 
 import { ProjectCard } from "../styled/card/card";
 
-import ViaCardCover from "../assets/images/via/viacard-cover-en.png";
-import ViaCardAr from "../assets/images/via/viacard-ar.png";
-import ViaCardEn from "../assets/images/via/viacard-en.png";
-import ViaCardForm from "../assets/images/via/viacard-form-en.png";
-import PaymentGatewayCover from "../assets/images/paymentGateway/pg-web.png";
-import PaymentGatewayMobile from "../assets/images/paymentGateway/pg-mobile.png";
-import MerchantPortalCover from "../assets/images/merchantPortal/mp-overview.png";
-import MerchantPortalLogin from "../assets/images/merchantPortal/mp-login.png";
-import MerchantPortalGeneral from "../assets/images/merchantPortal/mp-general.png";
+import ViaCover from "../assets/images/via/via-cover.png";
+import ViaAr from "../assets/images/via/via-ar.png";
+import ViaEn from "../assets/images/via/via-en.png";
+import ViaForm from "../assets/images/via/viaform-en.png";
+import PGCover from "../assets/images/paymentGateway/pg-cover.png";
+import PGZaky from "../assets/images/paymentGateway/pg-zaky.png";
+import PGWeb from "../assets/images/paymentGateway/pg-web.png";
+import PGMobile from "../assets/images/paymentGateway/pg-mobile.png";
+import MPCover from "../assets/images/merchantPortal/mp-cover.png";
+import MPOverview from "../assets/images/merchantPortal/mp-overview.png";
+import MPGeneral from "../assets/images/merchantPortal/mp-general.png";
+import MPLogin from "../assets/images/merchantPortal/mp-login.png";
+import MPBusiness from "../assets/images/merchantPortal/mp-business.png";
 import ZakyLogo from "../assets/images/zaky/zaky-logo.png";
 import ZakyLanding from "../assets/images/zaky/zaky-landing.png";
 import ZakyActivity from "../assets/images/zaky/zaky-activity.png";
-import ZakySend from "../assets/images/zaky/zaky-send.png";
+import ZakyBiometric from "../assets/images/zaky/zaky-biometric.png";
+import ZakySendMoney from "../assets/images/zaky/zaky-send-money.png";
+import ZakyVouchers from "../assets/images/zaky/zaky-vouchers.png";
+import ZakyWithdraw from "../assets/images/zaky/zaky-withdraw.png";
+import ZakyCover from "../assets/images/zaky/zaky-cover.png";
 import { ReactComponent as ViaCardLogo } from "../assets/images/via/via-logo.svg";
 import { ReactComponent as AreebaLogo } from "../assets/images/paymentGateway/areeba-logo.svg";
 
@@ -24,30 +32,43 @@ const { Title } = Typography;
 
 const ProjectsComponent = () => {
   const { t } = useTranslation(["common"]);
+
   const projects = [
     {
+      key: 1,
       title: t("FIRST_PROJECT_TITLE"),
       description: t("FIRST_PROJECT_SUMMARY"),
       Logo: <AreebaLogo style={{ width: 100 }} />,
-      images: [MerchantPortalCover, MerchantPortalGeneral, MerchantPortalLogin],
+      images: [MPCover, MPOverview, MPGeneral, MPLogin, MPBusiness],
     },
     {
+      key: 2,
       title: t("SECOND_PROJECT_TITLE"),
       description: t("SECOND_PROJECT_SUMMARY"),
       Logo: <img alt="alt" src={ZakyLogo} style={{ height: 50 }} />,
-      images: [ZakyLanding, ZakyActivity, ZakySend],
+      images: [
+        ZakyCover,
+        ZakyLanding,
+        ZakyActivity,
+        ZakyBiometric,
+        ZakySendMoney,
+        ZakyVouchers,
+        ZakyWithdraw,
+      ],
     },
     {
+      key: 3,
       title: t("THIRD_PROJECT_TITLE"),
       description: t("THIRD_PROJECT_SUMMARY"),
       Logo: <ViaCardLogo style={{ width: 100 }} />,
-      images: [ViaCardCover, ViaCardEn, ViaCardAr, ViaCardForm],
+      images: [ViaCover, ViaEn, ViaAr, ViaForm],
     },
     {
+      key: 4,
       title: t("FOURTH_PROJECT_TITLE"),
       description: t("FOURTH_PROJECT_SUMMARY"),
       Logo: <AreebaLogo style={{ width: 100 }} />,
-      images: [PaymentGatewayCover, PaymentGatewayMobile],
+      images: [PGCover, PGZaky, PGWeb, PGMobile],
     },
   ];
 
@@ -57,7 +78,7 @@ const ProjectsComponent = () => {
         <Title>{t("PROJECTS")}</Title>
         <Row align="bottom" justify="space-between">
           {projects.map((project) => (
-            <Col xs={24} md={12} key={project.title}>
+            <Col xs={24} md={12} key={project.key}>
               <Row align="bottom" justify="center" style={{ marginBottom: 50 }}>
                 <ProjectCard {...project} />
               </Row>

@@ -11,12 +11,14 @@ const EducationComponent = () => {
 
   const education = [
     {
+      key: 1,
       major: t("MASTERS_MAJOR"),
       university: t("MASTERS_UNIVERSITY"),
       location: t("MASTERS_LOCATION"),
       date: t("MASTERS_DATE"),
     },
     {
+      key: 2,
       major: t("BACHELOR_MAJOR"),
       university: t("BACHELOR_UNIVERSITY"),
       location: t("BACHELOR_LOCATION"),
@@ -29,7 +31,7 @@ const EducationComponent = () => {
         <Title>{t("EDUCATION")}</Title>
         <Row align="middle" justify="space-between">
           {education.map((ed) => (
-            <Col xs={24} key={ed.title}>
+            <Col xs={24} key={ed.key}>
               <EducationCard {...ed} />
               <Divider style={{ borderColor: "white" }} />
             </Col>

@@ -56,11 +56,12 @@ const ProjectCard = ({ title, description, Logo, images }) => (
       <Image.PreviewGroup>
         {images &&
           images.map((image) => (
-            <Image
+            <div
               key={image}
               style={{ display: image !== images[0] ? "none" : "block" }}
-              src={image}
-            />
+            >
+              <Image src={image} />
+            </div>
           ))}
       </Image.PreviewGroup>
     }
