@@ -6,7 +6,7 @@ import { MenuOutlined } from "@ant-design/icons";
 
 import { StyledMenu } from "../styled/Menu/menu";
 
-import RLogo from "../assets/images/r-logo.jpg";
+import { ReactComponent as RLogo } from "../assets/images/r-logo.svg";
 
 const HeaderComponent = () => {
   const { t, i18n } = useTranslation(["common"]);
@@ -90,7 +90,7 @@ const HeaderComponent = () => {
                     smooth
                     to="#overview"
                   >
-                    <img src={RLogo} alt="rafik" className={"r-logo"} />
+                    <RLogo style={{ width: 50 }} />
                   </HashLink>
                 </Col>
                 <Col xs={0} md={22}>
