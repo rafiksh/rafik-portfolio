@@ -3,7 +3,7 @@
 export const particlesConfig = {
   particles: {
     number: {
-      value: 100,
+      value: 75,
       density: {
         enable: true,
         value_area: 800,
@@ -38,7 +38,7 @@ export const particlesConfig = {
       },
     },
     size: {
-      value: 4,
+      value: 1,
       random: true,
       anim: {
         enable: false,
@@ -101,7 +101,7 @@ export const particlesConfig = {
         duration: 0.4,
       },
       push: {
-        particles_nb: 4,
+        particles_nb: 1,
       },
       remove: {
         particles_nb: 2,
