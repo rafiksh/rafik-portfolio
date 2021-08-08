@@ -74,9 +74,12 @@ let en = {
     THIRD_PROJECT_TITLE: "ViaCard",
     THIRD_PROJECT_SUMMARY:
       "ViaCard is the perfect answer to the needs of Lebanese people travelling abroad, shopping online or even those whose children are studying overseas.",
-    FOURTH_PROJECT_TITLE: "Areeba Payment Gateway",
+    // FOURTH_PROJECT_TITLE: "Areeba Payment Gateway",
+    // FOURTH_PROJECT_SUMMARY:
+    //   "Areeba payment gateway is a technology used by merchants to accept debit or credit card purchases from customers.",
+    FOURTH_PROJECT_TITLE: "Larex Global",
     FOURTH_PROJECT_SUMMARY:
-      "Areeba payment gateway is a technology used by merchants to accept debit or credit card purchases from customers.",
+      "Larex Global is an international coffee trading company in Europe and Middle East.",
 
     /** Education */
     MASTERS_MAJOR: "Masters of Science in Computer Engineering",
