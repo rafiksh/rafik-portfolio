@@ -48,6 +48,7 @@ const ProjectsComponent = () => {
       description: t("FOURTH_PROJECT_SUMMARY"),
       Logo: <img alt="alt" src={LarexLogo} style={{ height: 50 }} />,
       images: [LarexCover, LarexShop, LarexHome, LarexProduct],
+      link: "https://larex-global.com/",
     },
     {
       key: 2,
@@ -63,6 +64,7 @@ const ProjectsComponent = () => {
         ZakyVouchers,
         ZakyWithdraw,
       ],
+      link: "https://zaky.com/",
     },
     {
       key: 3,
@@ -70,6 +72,7 @@ const ProjectsComponent = () => {
       description: t("THIRD_PROJECT_SUMMARY"),
       Logo: <ViaCardLogo style={{ width: 100 }} />,
       images: [ViaCover, ViaEn, ViaAr, ViaForm],
+      link: "https://via-card.com/",
     },
   ];
 

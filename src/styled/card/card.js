@@ -49,7 +49,7 @@ const EducationCard = ({ major, university, location, date }) => (
   </Card>
 );
 
-const ProjectCard = ({ title, description, Logo, images }) => (
+const ProjectCard = ({ title, description, Logo, images, link }) => (
   <Card
     style={{ width: 450, textAlign: "start" }}
     cover={
@@ -69,7 +69,19 @@ const ProjectCard = ({ title, description, Logo, images }) => (
     <Meta
       avatar={Logo}
       title={title}
-      description={description}
+      description={
+        <div>
+          {description}
+          <br />
+          <h4
+            onClick={() => {
+              if (link) window.location = link;
+            }}
+          >
+            {link}
+          </h4>
+        </div>
+      }
       style={{ height: 175 }}
     />
   </Card>
